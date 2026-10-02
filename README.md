@@ -1,16 +1,72 @@
-# React + Vite
+# 🎬 Movie Search App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A React app to search movies using the OMDB API.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 🔍 Search movies by name
+- 🎬 Display movie posters, titles, and release years
+- ⏳ Loading and error states
+- ⚡ Debounced search with AbortController
+- 🎨 Responsive card grid
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- OMDB API
 
-## Expanding the Oxlint configuration
+## Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+1. Clone the repo:
+
+   \`\`\`bash
+   git clone https://github.com/YOUR_USERNAME/movie-search-app.git
+   cd movie-search-app
+   \`\`\`
+
+2. Install dependencies:
+
+   \`\`\`bash
+   npm install
+   \`\`\`
+
+3. Get a free API key from [OMDB](https://www.omdbapi.com/apikey.aspx) and activate it via email.
+
+4. Create a `.env` file in the project root:
+
+   \`\`\`
+   VITE_OMDB_KEY=your_api_key_here
+   \`\`\`
+
+5. Start the dev server:
+
+   \`\`\`bash
+   npm run dev
+   \`\`\`
+
+6. Open http://localhost:5173/
+
+## Project Structure
+
+\`\`\`
+src/
+├── components/
+│   ├── MovieCard.jsx
+│   ├── MovieList.jsx
+│   └── SearchBar.jsx
+├── App.jsx
+├── App.css
+└── main.jsx
+\`\`\`
+
+## What I Learned
+
+- React hooks: `useState`, `useEffect`
+- API integration with fetch
+- Debouncing and AbortController
+- Component composition and props
+
+## License
+
+MIT
