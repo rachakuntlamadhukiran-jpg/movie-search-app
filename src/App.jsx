@@ -3,7 +3,7 @@ import SearchBar from "./components/SearchBar";
 import MovieList from "./components/MovieList";
 import "./App.css";
 
-const API_KEY = "71c02547 "; // your OMDB key
+const API_KEY = import.meta.env.VITE_OMDB_KEY;
 
 export default function App() {
   const [query, setQuery] = useState("");
